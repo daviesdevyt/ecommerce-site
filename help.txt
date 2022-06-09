@@ -1,0 +1,4 @@
+Views.py
+Get the customers custom password  create new salt and encode it as the key to decrypt feedback
+
+Also change the password in admin to the admins password

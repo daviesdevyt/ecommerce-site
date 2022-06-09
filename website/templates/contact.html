@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}Contact us{% endblock %}
+
+{% block content %}
+<h3 align='center'>Contact us</h3>
+<form method="POST">
+    <div class="form-group">
+        <label for='message'>Message</label>
+        <textarea type="text" class="form-control" id='message' name='message' placeholder="Leave your feedback"
+        style="height: 200px;" required></textarea>
+    </div>
+    <br>
+    <button type="submit" class='btn btn-primary' align='center'>Submit</button>
+</form>
+{% endblock %}
+

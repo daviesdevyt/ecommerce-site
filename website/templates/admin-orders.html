@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block title %}Orders{% endblock %}
+
+{% block content %}
+{% for order in orders %}
+<h4>Contact at {{ order.phone }} or {{ order.email }}</h4>
+<ul>
+    {% for item in order.items %}
+       <li>{{ item.q }} piece(s) of {{ item.name }}</li>
+    {% endfor %}
+</ul>
+<input type="hidden" name="type" value="order_completed">
+<button type="submit" name="order_id" class="btn btn-primary" value="{{order.id}}">Order completed</button>
+{% endfor %}
+<br><a href="/admin"><button class="btn btn-primary">Back</button></a>
+
+{% endblock %}

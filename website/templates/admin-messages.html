@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %}Messages{% endblock %}
+
+{%block content %}
+{% for msg in msgs %}
+<form method="POST">
+    <input type="hidden" name="type" value="delete_message">
+    <div style="word-wrap: break-word;" class="form-control">{{ msg.msg }}<button type="submit" name="msg_id" value={{msg.id}} class="close">Delete</button></div>
+</form>
+{% endfor %}
+<br>
+<br><a href="/admin"><button class="btn btn-primary">Back</button></a>
+
+{% endblock %}
